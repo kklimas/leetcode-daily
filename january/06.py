@@ -10,7 +10,7 @@ If you choose a job that ends at time X you will be able to start another job th
 from bisect import bisect_right
 
 
-def job_scheduling(start_times, end_times, profits):
+def job_scheduling(startTime, endTime, profit):
     jobs = sorted(zip(startTime, endTime, profit), key=lambda x: x[1])
     sorted_end_times = [x[1] for x in jobs]
     n = len(jobs)
@@ -38,8 +38,8 @@ def job_scheduling(start_times, end_times, profits):
 # endTime = [2, 3, 4]
 # profit = [5, 6, 4]
 
-startTime = [1,2,3,3]
-endTime = [3,4,5,6]
+startTime = [1, 2, 3, 3]
+endTime = [3, 4, 5, 6]
 profit = [50, 10, 40, 70]
 
 print(job_scheduling(startTime, endTime, profit))
